@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Worlds</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- Main Menu -->
+  <div id="main-menu" class="menu-screen">
+    <h1 class="game-title">🚨 TEST PAGE 🚨</h1>
+    <p class="subtitle">Explore five unique golf careers</p>
+
+    <div class="worlds-grid">
+      <div class="world-card" data-game="golfer">
+        <div class="world-thumb" aria-hidden="true">🏌️</div>
+        <h2>Golfer</h2>
+        <p>Play as the golfer. Master timing and precision to make par.</p>
+      </div>
+
+      <div class="world-card" data-game="groundskeeper">
+        <div class="world-thumb" aria-hidden="true">🌱</div>
+        <h2>Groundskeeper</h2>
+        <p>Keep the greens alive! Manage water flow before it dries up.</p>
+      </div>
+
+      <div class="world-card" data-game="designer">
+        <div class="world-thumb" aria-hidden="true">🧩</div>
+        <h2>Course Designer</h2>
+        <p>Design your own golf course with sand, water, and green brushes.</p>
+      </div>
+
+      <div class="world-card" data-game="manager">
+        <div class="world-thumb" aria-hidden="true">📅</div>
+        <h2>Club Manager</h2>
+        <p>Manage the clubhouse, balance budgets, and keep golfers happy.</p>
+      </div>
+
+      <div class="world-card" data-game="caddy">
+        <div class="world-thumb" aria-hidden="true">🎒</div>
+        <h2>Caddy Dash</h2>
+        <p>Run and jump over obstacles while sprinting clubs down the course.</p>
+      </div>
+
+      <!-- ✅ CREDITS CARD (THIS WAS MISSING IN YOUR REAL FILE) -->
+      <div class="world-card" data-game="credits">
+        <div class="world-thumb" aria-hidden="true">📜</div>
+        <h2>Credits</h2>
+        <p>See who built the game</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Area -->
+  <div id="game-container" class="hidden">
+    <canvas id="gameCanvas"></canvas>
+    <div class="game-ui">
+      <button id="backButton" aria-label="Back to Main Menu">🏠 Back to Menu</button>
+      <div id="gameInfo"></div>
+    </div>
+  </div>
+
+  <script src="scripts/app.js?v=creditsfix1"></script>
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    function resizeCanvas() {
+      canvas.width = Math.min(window.innerWidth * 0.9, 800);
+      canvas.height = Math.min(window.innerHeight * 0.8, 600);
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+  </script>
+</body>
+</html>
